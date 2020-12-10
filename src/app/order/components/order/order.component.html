@@ -1,0 +1,69 @@
+<mat-horizontal-stepper>
+    <mat-step>
+        <ng-template matStepLabel>Your Products</ng-template>
+        <div *ngIf="( products$ | async ) as products">
+            <mat-card *ngIf="products.length === 0">
+                No hay productos en el carrito 
+            </mat-card>
+            <table mat-table [dataSource]="products" class="table">           
+                <!-- Position Column -->
+                <ng-container matColumnDef="id">
+                    <th mat-header-cell *matHeaderCellDef> Image </th>
+                    <td mat-cell *matCellDef="let product" >
+                        <img class="image" [src]="product.image">
+                    </td>
+                </ng-container>
+
+                <!-- Name Column -->
+                <ng-container matColumnDef="title">
+                    <th mat-header-cell *matHeaderCellDef> Name </th>
+                    <td mat-cell *matCellDef="let product"> {{ product.title }} </td>
+                </ng-container>
+
+                <!-- Description Column -->
+                <ng-container matColumnDef="description">
+                    <th mat-header-cell *matHeaderCellDef> Description </th>
+                    <td mat-cell *matCellDef="let product"> {{ product.description }} </td>
+                </ng-container>
+
+                <!-- Price Column -->
+                <ng-container matColumnDef="price">
+                    <th mat-header-cell *matHeaderCellDef> Price </th>
+                    <td mat-cell *matCellDef="let product"> {{ product.price | currency }} </td>
+                </ng-container>
+
+                <!-- Quantity Column -->
+                <ng-container matColumnDef="quantity">
+                    <th mat-header-cell *matHeaderCellDef> Quantity </th>
+                    <td mat-cell *matCellDef="let product"> {{ product.quantity }} </td>
+                </ng-container>
+
+                <!-- Total Column -->
+                <ng-container matColumnDef="total">
+                    <th mat-header-cell *matHeaderCellDef> Total </th>
+                    <td mat-cell *matCellDef="let product"> {{ product.total | currency }} </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+        </div>
+        <div class="netx">
+            <button mat-raised-button matStepperNext class="buttonB">Next</button>
+        </div>
+    </mat-step>
+    <mat-step>
+        <ng-template matStepLabel>Your Data</ng-template>
+        <h1>Form</h1>
+        <div>
+            <button mat-raised-button matStepperPrevious class="buttonA">Back</button>
+            <button mat-raised-button matStepperNext class="buttonB">Next</button>
+        </div>
+    </mat-step>
+    <mat-step>
+        <ng-template matStepLabel>Confirm Your Order</ng-template>
+        <h1>Link pay form</h1>
+        <button mat-raised-button matStepperPrevious class="buttonA">Back</button>
+        <!-- <button mat-raised-button matStepperNext class="buttonB">Next</button> -->
+    </mat-step>
+</mat-horizontal-stepper>

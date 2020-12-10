@@ -1,0 +1,87 @@
+<p>demo works!</p>
+<!-- 
+////////////////////////////////////////
+String Interpolation  
+{{ title }}
+
+////////////////////////////////////////
+Two-Way-Data-Binidng
+<input type="text" [(ngModel)]="title">
+<br>
+{{ title }}
+
+////////////////////////////////////////
+Conditionals
+
+<div *ngIf="title === 'Store'">
+    This is a div
+</div>
+
+<div [ngSwitch]=" title ">
+    <p *ngSwitchCase="'Fabian'">This is Fabian</p>
+    <p *ngSwitchCase="'Carlos'">This is Carlos</p>
+    <p *ngSwitchCase="'Julian'">This is Julian</p>
+    <p *ngSwitchDefault>No match</p>
+</div>
+
+////////////////////////////////////////
+ngFor
+<ul>
+    <li *ngFor="let fruit of fruits; index as i">
+        {{ i + 1 }} - {{ fruit }}
+    </li>
+</ul>
+
+////////////////////////////////////////
+Event Click
+<button (click)="addItem()">Add</button>
+<ul>
+    <li *ngIf="fruits.length === 0">The list is empty</li>
+    <li *ngFor="let fruit of fruits; index as i">
+        {{ i + 1 }} - {{ fruit }}
+        <button (click)="deleteItem()">Delete</button>
+    </li>
+</ul>
+
+////////////////////////////////////////
+Interfaces
+
+Product.model.ts
+export interface Product {
+    id: string;
+    image: string;
+    title: string;
+    price: number;
+    description: string;
+}
+
+<div *ngFor="let product of products">
+    {{ product.title }}
+    <img [src]="product.image" alt="">
+    {{ product.price }}
+    {{ product.description }}
+</div>
+
+////////////////////////////////////////
+Components and Decorators
+Product.component.ts
+import { Component } from '@angular/core';
+
+@Component({
+    selector: 'app-product',
+    templateUrl: 'product.component.html'
+})
+
+export class ProductComponent {
+
+}
+
+<app-product></app-product>
+
+
+////////////////////////////////////////
+Inputs y Outputs
+<app-product [product]="product"></app-product>
+
+-->
+

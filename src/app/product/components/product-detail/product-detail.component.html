@@ -1,0 +1,7 @@
+<div *ngIf="product">
+    <h2 class="product_title">{{ product.title }}</h2>
+    <img [src]="product.image" alt="">
+    <h4 class="product_price">{{ product.price | currency }}</h4>
+    <p class="product_description">{{ product.description }}</p>
+    <a mat-raised-button class="product_button" routerLink="/products">Return</a>
+</div>

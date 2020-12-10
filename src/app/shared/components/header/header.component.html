@@ -1,0 +1,22 @@
+<nav class="nav">
+    <div class="nav_brand">
+        <a routerLink="/home">
+            <img src="../../assets/images/angular.gif" alt="">
+        </a>
+        <h2>Angular Store</h2>
+    </div>
+    <div class="nav_pages--cart">
+        <a 
+            routerLink="/order" 
+            mat-raised-button 
+            [matBadge]="total$ | async" 
+            matBadgeColor="warn">
+            <mat-icon class="icon">shopping_cart</mat-icon> 
+        </a>
+    </div>
+    <div class="nav_pages">
+        <a routerLink="/home" routerLinkActive="active">Home</a>
+        <a routerLink="/products" routerLinkActive="active">Products</a>
+        <a routerLink="/contact" routerLinkActive="active">Contact</a>
+    </div>
+</nav>

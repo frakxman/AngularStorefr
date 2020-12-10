@@ -1,0 +1,8 @@
+
+<h2 class="product_title">{{ product.title }}</h2>
+<a [routerLink]="['/products', product.id]">
+    <img [src]="product.image" alt="Product image">
+</a>
+<h4 class="product_price">{{ product.price | currency }}</h4>
+
+<button mat-raised-button class="product_button" (click)="addToCart()">Add to cart</button>

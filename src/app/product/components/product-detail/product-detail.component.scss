@@ -1,0 +1,28 @@
+img {
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.product_title {
+    text-align: center;
+    font-style: italic;;
+}
+
+.product_price {
+    text-align: center;
+    background-color: #f00;
+}
+
+.product_description {
+    text-align: center;
+}
+
+.product_button {
+    background-color: #f00;
+    border-radius: 5px;
+    color: #ffffff;
+    margin-left: 30%;
+    margin-bottom: 5px;
+    text-decoration: none;
+    width: 40%;
+}

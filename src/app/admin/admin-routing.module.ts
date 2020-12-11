@@ -18,7 +18,7 @@ const routes: Routes = [
       { path: 'edit/:id', component: ProductEditComponent },
     ]
   },
-  { path: '**', pathMatch: 'full', redirectTo: '' },
+  { path: '**', loadChildren: () => import('../error/error.module').then( m => m.ErrorModule )}
 ];
 
 @NgModule({

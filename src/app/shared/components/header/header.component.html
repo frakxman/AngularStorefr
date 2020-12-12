@@ -14,6 +14,9 @@
             <mat-icon class="icon">shopping_cart</mat-icon> 
         </a>
     </div>
+    <a mat-raised-button (click)="installByUser()" class="download" *ngIf="installEvent">
+        <mat-icon>get_app</mat-icon>
+    </a>
     <div class="nav_pages">
         <a routerLink="/home" routerLinkActive="active">Home</a>
         <a routerLink="/products" routerLinkActive="active">Products</a>

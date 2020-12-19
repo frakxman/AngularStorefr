@@ -2,25 +2,35 @@
     <mat-card class="card">
         <mat-card-header>
             <mat-card-title>Login</mat-card-title>
+            <mat-icon>account_circle</mat-icon>
         </mat-card-header>
         <mat-card-content>
             <div class="row">
-                <div class="col-xs">
-                    <mat-form-field>
-                        <input placeholder="email" formControlName="email" matInput type="email">
+                <div class="col">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Email</mat-label>
+                        <input formControlName="email" matInput type="email">
+                        <mat-error *ngIf="emailField.touched && emailField.invalid">
+                            <ng-container *ngIf="emailField.hasError('required')">* This field is required</ng-container>
+                            <ng-container *ngIf="emailField.hasError('email')">* This is not a valid email</ng-container>
+                        </mat-error>
                     </mat-form-field>
                 </div>
             </div>
             <div class="row">
-                <div class="col-xs">
-                    <mat-form-field>
-                        <input placeholder="password" formControlName="password" matInput type="password">
+                <div class="col">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Password</mat-label>
+                        <input formControlName="password" matInput type="password">
+                        <mat-error *ngIf="passwordField.touched && passwordField.invalid">
+                            <ng-container *ngIf="passwordField.hasError('required')">* This field is required</ng-container>
+                        </mat-error>
                     </mat-form-field>
                 </div>
             </div>
         </mat-card-content>
         <mat-card-actions>
-            <button [disabled]="form.invalid" mat-raised-button type="submit">Ingresar</button>
+            <button [disabled]="form.invalid" mat-raised-button type="submit" class="button">Login</button>
         </mat-card-actions>
     </mat-card>
 </form>

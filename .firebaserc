@@ -1,14 +1,14 @@
 {
   "targets": {
-    "store-a4b56": {
+    "storefr-f825d": {
       "hosting": {
         "Store": [
-          "store-a4b56"
+          "storefr-f825d"
         ]
       }
     }
   },
   "projects": {
-    "default": "store-a4b56"
+    "default": "storefr-f825d"
   }
 }

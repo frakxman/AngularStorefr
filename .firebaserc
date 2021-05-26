@@ -1,14 +1,14 @@
 {
   "targets": {
-    "storefr-f825d": {
+    "angularstore-792b3": {
       "hosting": {
         "Store": [
-          "storefr-f825d"
+          "angularstore-792b3"
         ]
       }
     }
   },
   "projects": {
-    "default": "storefr-f825d"
+    "default": "angularstore-792b3"
   }
 }

@@ -8,13 +8,12 @@ importScripts('https://www.gstatic.com/firebasejs/8.0.1/firebase-messaging.js');
 // your app's Firebase config object.
 // https://firebase.google.com/docs/web/setup#config-object
 firebase.initializeApp({
-    apiKey: 'AIzaSyABb9mUBGrxCy8RhSJWvqwaYSKuGRa7bSA',
-    authDomain: 'storefr-f825d.firebaseapp.com',
-    databaseURL: 'https://project-id.firebaseio.com',
-    projectId: 'storefr-f825d',
-    storageBucket: 'storefr-f825d.appspot.com',
-    messagingSenderId: '37222674283',
-    appId: '1:37222674283:web:5e2b30c53b558b582b662e',
+    apiKey: 'AIzaSyAsvoqEA0RN_UiJ-VvLqo2cquEyxCNaaLY',
+    authDomain: 'angularstore-792b3.firebaseapp.com',
+    projectId: 'angularstore-792b3',
+    storageBucket: 'angularstore-792b3.appspot.com',
+    messagingSenderId: '638199613237',
+    appId: '1:638199613237:web:52bbf6af68c4790d7d6e7c',
     measurementId: 'G-measurement-id',
 });
 
